@@ -1,0 +1,24 @@
+# Sensitive configuration files
+config/database.php
+config/secrets.php
+
+# Uploaded files
+uploads/evidence/*
+
+# Logs
+logs/*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+
+# Email backups (if any)
+emails/*.html
+
+# Temporary files
+*.tmp
+*.log

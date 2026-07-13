@@ -1,0 +1,25 @@
+# Safe .htaccess for InfinityFree
+RewriteEngine On
+
+# Custom 404 error page
+ErrorDocument 404 /404.php
+
+# Security headers (safe version)
+<IfModule mod_headers.c>
+    Header set X-Content-Type-Options "nosniff"
+    Header set X-Frame-Options "SAMEORIGIN"
+</IfModule>
+
+# Prevent directory listing
+Options -Indexes
+
+# Protect sensitive files
+<Files "*.sql">
+    Order allow,deny
+    Deny from all
+</Files>
+
+<Files "*.log">
+    Order allow,deny
+    Deny from all
+</Files>
